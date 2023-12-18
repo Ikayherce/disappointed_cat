@@ -40,7 +40,11 @@ def play (word)
                 print("You already guessed the word", guess)
                 elif guess != word: 
                     print(guess, "is not the word.")
-
+                    tries -= 1
+                    guessed_words.append(guess)
+                else:
+                    guessed = True 
+                    word_completion = word
         else: 
             print("Your guess is not valid")
             print(display_hangman(tries))
