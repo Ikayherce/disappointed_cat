@@ -5,7 +5,7 @@ def get_word():
     word = random.choice(word_list)
     return word.upper()
 
-def play (word)
+def play (word):
     word_completion = "_" * len (word)
     guess = False
     guessed_letters = []
@@ -13,14 +13,14 @@ def play (word)
     tries = 6
     print("Welcome to hangman. Let's play!")
     print(display_hangman(tries))
-    print(word completion)
+    print(word_completion)
     print("\n")
     while not guessed and tries > 0: 
         guess = input("Please guess a letter, or the whole word: ").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print("You already guessed this letter!", guess)
-            elif guess is not in word:
+            elif guess not in word:
                 print("Oh no!" , guess, "is not in the word.")
                 tries -= 1 
                 guessed_letters.append(guess)
@@ -31,20 +31,20 @@ def play (word)
                 indices = [i for i, letter in enumerate(word) if letter == guess]
                 for index in indices:
                     word_as_list[index] = guess 
-                word_completion = ""join.(word_as_list)
+                word_completion = "".join(word_as_list)
                 if "_" not in word_completion:
                     guess = True 
         
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
                 print("You already guessed the word", guess)
-                elif guess != word: 
+            elif guess != word: 
                     print(guess, "is not the word.")
                     tries -= 1
                     guessed_words.append(guess)
-                else:
-                    guessed = True 
-                    word_completion = word
+            else:
+                 guessed = True 
+                 word_completion = word
         else: 
             print("Your guess is not valid")
             print(display_hangman(tries))
@@ -124,8 +124,6 @@ def main():
     while input("Do you want to play again? (Y/N)").upper() == "Y":
         word = get_word()
         play(word)
-
-
-if __name__ == "__main__"   
-    main() 
-
+        
+if __name__ == "__main__":
+    main()
