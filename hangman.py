@@ -50,7 +50,10 @@ def play (word)
             print(display_hangman(tries))
             print(word_completion)
             print("\n")
-
+    if guessed: 
+        print("Congratulations, you guessed the word! You can be proud")
+    else: 
+        print("Oh no! You ran out of tries. The word was "+ word +". Loser! lol")
         
 
 
