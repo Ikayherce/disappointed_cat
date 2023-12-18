@@ -17,7 +17,12 @@ def play (word)
     print("\n")
     while not guessed and tries > 0: 
         guess = input("Please guess a letter, or the whole word: ").upper()
+        if len(guess) == 1 and guess.isalpha():
         
+        elif len(guess) == len(word) and guess.isalpha():
+
+        else: 
+            print("Not a valid guess.")
 
 
     
