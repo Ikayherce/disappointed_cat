@@ -7,7 +7,7 @@ def get_word():
 
 def play (word):
     word_completion = "_" * len (word)
-    guess = False
+    guessed = False
     guessed_letters = []
     guessed_words = []
     tries = 6
@@ -114,6 +114,16 @@ def display_hangman(tries):
                 # ears
                 """
                   ／＞　 フ
+                """,
+                      # initial empty state
+                """
+                   --------
+                   |      |
+                   |      
+                   |    
+                   |      
+                   |     
+                   -
                 """
     ]
     return stages[tries]        
@@ -124,6 +134,6 @@ def main():
     while input("Do you want to play again? (Y/N)").upper() == "Y":
         word = get_word()
         play(word)
-        
+
 if __name__ == "__main__":
     main()
