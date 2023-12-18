@@ -56,6 +56,68 @@ def play (word)
         print("Oh no! You ran out of tries. The word was "+ word +". Loser! lol")
         
 
+def display_hangman(tries):
+    stages = [  # final state: head, torso, paws, tail
+                """
+                                         ／＞　 フ  
+                                        | 　_　_| 
+                                      ／` ミ＿xノ 
+                                     /　　　　 |
+                                    /　 ヽ　　 ﾉ
+                                   │　　|　|　|
+                               ／￣|　　 |　|　|
+                                (￣ヽ＿_ヽ_)__)
+                                 ＼二)
+                               
+                """,
+                # head, torso and paws
+                """
+                  
+                                         ／＞　 フ  
+                                        | 　_　_| 
+                                      ／` ミ＿xノ 
+                                     /　　　　 |
+                                    /　 ヽ　　 ﾉ
+                                   │　　|　|　|
 
+                """,
+                # head and full torso
+                """
+                                         ／＞　 フ
+                                        | 　_　_| 
+                                      ／` ミ＿xノ 
+                                     /　　　　 |
+                                    /　 ヽ　　 ﾉ
+                                   
+                """,
+                # head and some torso
+                """
+                           ／＞　 フ
+                          | 　_　_| 
+                        ／` ミ＿xノ 
+                       /　　　　 |
+                      
+                """,
+                # head
+                """
+                        ／＞　 フ
+                       | 　_　_| 
+                     ／` ミ＿xノ 
+                      
+                """,
+                # ears and eyes
+                """
+                 ／＞　 フ
+                | 　_　_| 
+               
+                """,
+                # ears
+                """
+                  ／＞　 フ
+                """
+    ]
+    return stages[tries]        
+
+def main
     
 
