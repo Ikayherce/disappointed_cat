@@ -11,5 +11,14 @@ def play (word)
     guessed_letters = []
     guessed_words = []
     tries = 6
+    print("Welcome to hangman. Let's play!")
+    print(display_hangman(tries))
+    print(word completion)
+    print("\n")
+    while not guessed and tries > 0: 
+        guess = input("Please guess a letter, or the whole word: ").upper()
+        
+
+
     
 
