@@ -30,3 +30,8 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 ---
 
 Happy coding!
+
+
+## Credits
+Tutorial followed: 
+https://www.youtube.com/watch?v=m4nEnsavl6w 
