@@ -21,10 +21,12 @@ def play (word)
             if guess in guessed_letters:
                 print("You already guessed this letter!", guess)
             elif guess is not in word:
-                print(guess, "is not in the word.")
+                print("Oh no!" , guess, "is not in the word.")
                 tries -= 1 
                 guessed_letters.append(guess)
             else: 
+                print("Well done", guess, "is in the word." )
+                guessed_letters.append(guess)
         
         elif len(guess) == len(word) and guess.isalpha():
 
