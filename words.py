@@ -23,5 +23,11 @@ word_list = [
     'ginger',
     'freedom',
     'pebble',
-    'blanket'
+    'blanket',
+    'jiggly',
+    'tiger',
+    'holiday',
+    'beach',
+    'piano',
+    'chickpea'
 ]

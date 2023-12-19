@@ -59,15 +59,16 @@ def play (word):
 def display_hangman(tries):
     stages = [  # final state: head, torso, paws, tail
                 """
-                                         ／＞　 フ  
-                                        | 　_　_| 
-                                      ／` ミ＿xノ 
-                                     /　　　　 |
-                                    /　 ヽ　　 ﾉ
-                                   │　　|　|　|
-                               ／￣|　　 |　|　|
-                                (￣ヽ＿_ヽ_)__)
-                                 ＼二)
+                          ／＞　 フ
+                         | 　_　_| 
+                       ／` ミ＿xノ 
+                      /　　　　 |
+                     /　 ヽ　　 ﾉ
+                    │　　|　|　|
+                ／￣|　　 |　|　|
+                 (￣ヽ＿_ヽ_)__)
+                  ＼二)
+
                                
                 """,
                 # head, torso and paws
