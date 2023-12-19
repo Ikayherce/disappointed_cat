@@ -47,15 +47,22 @@ def play(word):
             else:
                  guessed = True 
                  word_completion = word
-        else: 
-            print("Your guess is not valid")
-            print(display_hangman(tries))
-            print(word_completion)
-            print("\n")
-    if guessed: 
-        print("Congratulations, you guessed the word! You can be proud")
-    else: 
-        print("Oh no! You ran out of tries. The word was "+ word +". Loser! lol")
+        else:
+            word_length = len(word)
+            print("Your guess is not valid.")
+            print(f"It needs to be a letter or a word of {word_length} length")
+                    
+        print(display_hangman(tries))
+        print(word_completion)
+        print("\n")
+    
+    if guessed:
+        print("Congratulations, you guessed the word! You can be proud!")
+    else:
+        print("Oh no! You ran out of tries.")
+        print(f"The word was {word}. Better luck next time!")
+
+
         
 
 def display_hangman(tries):
