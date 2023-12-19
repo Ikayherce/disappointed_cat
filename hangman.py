@@ -11,7 +11,7 @@ def play(word):
     guessed = False
     guessed_letters = []
     guessed_words = []
-    tries = 6
+    tries = 7
     # show welcome message
     print("Welcome to hangman. Let's play!")
     print(display_hangman(tries))
@@ -63,8 +63,83 @@ def play(word):
         print(f"The word was {word}. Better luck next time!")
 
 
+def display_hangman(tries):
+    stages = [  # final state: head, torso, paws, tail
+                """
+                          (\__/)
+                          (•ㅅ•)      Don’t talk to
+                       ＿ノヽ ノ＼＿      me or my son
+                   ` /　`/ ⌒Ｙ⌒ Ｙ  ヽ     ever again.
+                    ( 　(三ヽ人　 /　  |
+                    |　ﾉ⌒＼ ￣￣ヽ   ノ
+                       ヽ＿＿＿＞､＿_／
+                        ｜( 王 ﾉ〈   (\__/)
+                         /ﾐ`ー―彡\   (•ㅅ•)
+                        / ╰    ╯ \  /    \>
         
+                """,
+                # head, torso and paws
+                """
+                          (\__/)
+                          (•ㅅ•)       
+                       ＿ノヽ ノ＼＿      
+                   ` /　`/ ⌒Ｙ⌒ Ｙ  ヽ      
+                    ( 　(三ヽ人　 /　  |
+                    |　ﾉ⌒＼ ￣￣ヽ   ノ
+                       ヽ＿＿＿＞､＿_／
+                        ｜( 王 ﾉ〈   (\__/)
+                         /ﾐ`ー―彡\   (•ㅅ•)
+                      
+                                         
+​
+                """,
+                # head and full torso
+                """
+                          (\__/)
+                          (•ㅅ•)       
+                       ＿ノヽ ノ＼＿      
+                   ` /　`/ ⌒Ｙ⌒ Ｙ  ヽ      
+                    ( 　(三ヽ人　 /　  |
+                    |　ﾉ⌒＼ ￣￣ヽ   ノ
+                       ヽ＿＿＿＞､＿_／
+                        ｜( 王 ﾉ〈   (\__/)
+                     
+                                      
+                """,
+                # head and some torso
+                """
+                          (\__/)
+                          (•ㅅ•)       
+                       ＿ノヽ ノ＼＿      
+                   ` /　`/ ⌒Ｙ⌒ Ｙ  ヽ      
+                    ( 　(三ヽ人　 /　  |
+                    |　ﾉ⌒＼ ￣￣ヽ   ノ
+                
+                """,
+                # head
+                """
+                          (\__/)
+                          (•ㅅ•)       
+                       ＿ノヽ ノ＼＿      
+                   ` /　`/ ⌒Ｙ⌒ Ｙ  ヽ      
+       
+                """,
+                # ears and eyes
+                """
+                          (\__/)
+                          (•ㅅ•)       
+                  
+                """,
+                # ears
+                """
+                          (\__/)
+                """,
+                      # initial empty state
+                """
+                 
+    ]        
 
+"""
 def display_hangman(tries):
     stages = [  # final state: head, torso, paws, tail
                 """
@@ -125,19 +200,13 @@ def display_hangman(tries):
                 """
                   ／＞　 フ
                 """,
-                      # initial empty state
+
+                 # initial empty state
                 """
-                   --------
-                   |      |
-                   |      
-                   |    
-                   |      
-                   |     
-                   -
-                """
+                 
     ]
     return stages[tries]        
-
+"""
 def main():
     word = get_word()
     play(word)
