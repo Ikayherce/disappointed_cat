@@ -2,12 +2,18 @@ import random
 from words import word_list
 
 def get_word():
-    """ add doc string for each function """
+    """  """
     word = random.choice(word_list)
     return word.upper()
 
 def play(word):
-    """ this play function """
+    """ 
+    this is the play function. 
+    this function controls that the underscores displayed are the right length for the word to guess,
+    as well as controlling that the user gives valid guesses (letters of the alphabet or words of the right length),
+    as well as subtracting points when guess is not correct and printing right feedback to the user.
+    This function also displays the right letters in their right place replacing the underscore in the word to guess.
+    """
     word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []
@@ -21,15 +27,18 @@ def play(word):
     
     while not guessed and tries > 0:
         guess = input("Please guess a letter, or the whole word: ").upper()
-        # check if one letter and that it is alphabetical
+        # check that user data is one letter or a word of the riht length
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
+                #warns user letter has been already guessed
                 print("You already guessed this letter!", guess)
             elif guess not in word:
                 print("Oh no!", guess, "is not in the word.")
+                #substract tries by 1 when guess is wrong
                 tries -= 1
                 guessed_letters.append(guess)
             else:
+                #print feedback to user when guess is correct
                 print("Well done,", guess, "is in the word.")
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
