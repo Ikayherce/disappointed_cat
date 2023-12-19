@@ -5,12 +5,14 @@ def get_word():
     word = random.choice(word_list)
     return word.upper()
 
-def play (word):
-    word_completion = "_" * len (word)
+def play(word):
+    """this is the play function"""
+    word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []
     guessed_words = []
     tries = 6
+    # show welcome message
     print("Welcome to hangman. Let's play!")
     print(display_hangman(tries))
     print(word_completion)
@@ -33,7 +35,7 @@ def play (word):
                     word_as_list[index] = guess 
                 word_completion = "".join(word_as_list)
                 if "_" not in word_completion:
-                    guess = True 
+                    guessed = True 
         
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
