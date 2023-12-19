@@ -2,56 +2,58 @@ import random
 from words import word_list
 
 def get_word():
+    """ add doc string for each function """
     word = random.choice(word_list)
     return word.upper()
 
 def play(word):
-    """this is the play function"""
+    """ this play function """
     word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []
     guessed_words = []
-    tries = 7
+    tries = 6
     # show welcome message
-    print("Welcome to hangman. Let's play!")
+    print("Welcome to Hangman. Let's play!")
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
-    while not guessed and tries > 0: 
+    
+    while not guessed and tries > 0:
         guess = input("Please guess a letter, or the whole word: ").upper()
+        # check if one letter and that it is alphabetical
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print("You already guessed this letter!", guess)
             elif guess not in word:
-                print("Oh no!" , guess, "is not in the word.")
-                tries -= 1 
+                print("Oh no!", guess, "is not in the word.")
+                tries -= 1
                 guessed_letters.append(guess)
-            else: 
-                print("Well done", guess, "is in the word." )
+            else:
+                print("Well done,", guess, "is in the word.")
                 guessed_letters.append(guess)
-                word_as_list = list(word_completion) 
+                word_as_list = list(word_completion)
                 indices = [i for i, letter in enumerate(word) if letter == guess]
                 for index in indices:
-                    word_as_list[index] = guess 
+                    word_as_list[index] = guess
                 word_completion = "".join(word_as_list)
                 if "_" not in word_completion:
-                    guessed = True 
-        
+                    guessed = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
                 print("You already guessed the word", guess)
-            elif guess != word: 
-                    print(guess, "is not the word.")
-                    tries -= 1
-                    guessed_words.append(guess)
+            elif guess != word:
+                print(guess, "is not the word.")
+                tries -= 1
+                guessed_words.append(guess)
             else:
-                 guessed = True 
-                 word_completion = word
+                guessed = True
+                word_completion = word
         else:
             word_length = len(word)
             print("Your guess is not valid.")
             print(f"It needs to be a letter or a word of {word_length} length")
-                    
+        
         print(display_hangman(tries))
         print(word_completion)
         print("\n")
@@ -63,83 +65,6 @@ def play(word):
         print(f"The word was {word}. Better luck next time!")
 
 
-def display_hangman(tries):
-    stages = [  # final state: head, torso, paws, tail
-                """
-                          (\__/)
-                          (•ㅅ•)      Don’t talk to
-                       ＿ノヽ ノ＼＿      me or my son
-                   ` /　`/ ⌒Ｙ⌒ Ｙ  ヽ     ever again.
-                    ( 　(三ヽ人　 /　  |
-                    |　ﾉ⌒＼ ￣￣ヽ   ノ
-                       ヽ＿＿＿＞､＿_／
-                        ｜( 王 ﾉ〈   (\__/)
-                         /ﾐ`ー―彡\   (•ㅅ•)
-                        / ╰    ╯ \  /    \>
-        
-                """,
-                # head, torso and paws
-                """
-                          (\__/)
-                          (•ㅅ•)       
-                       ＿ノヽ ノ＼＿      
-                   ` /　`/ ⌒Ｙ⌒ Ｙ  ヽ      
-                    ( 　(三ヽ人　 /　  |
-                    |　ﾉ⌒＼ ￣￣ヽ   ノ
-                       ヽ＿＿＿＞､＿_／
-                        ｜( 王 ﾉ〈   (\__/)
-                         /ﾐ`ー―彡\   (•ㅅ•)
-                      
-                                         
-​
-                """,
-                # head and full torso
-                """
-                          (\__/)
-                          (•ㅅ•)       
-                       ＿ノヽ ノ＼＿      
-                   ` /　`/ ⌒Ｙ⌒ Ｙ  ヽ      
-                    ( 　(三ヽ人　 /　  |
-                    |　ﾉ⌒＼ ￣￣ヽ   ノ
-                       ヽ＿＿＿＞､＿_／
-                        ｜( 王 ﾉ〈   (\__/)
-                     
-                                      
-                """,
-                # head and some torso
-                """
-                          (\__/)
-                          (•ㅅ•)       
-                       ＿ノヽ ノ＼＿      
-                   ` /　`/ ⌒Ｙ⌒ Ｙ  ヽ      
-                    ( 　(三ヽ人　 /　  |
-                    |　ﾉ⌒＼ ￣￣ヽ   ノ
-                
-                """,
-                # head
-                """
-                          (\__/)
-                          (•ㅅ•)       
-                       ＿ノヽ ノ＼＿      
-                   ` /　`/ ⌒Ｙ⌒ Ｙ  ヽ      
-       
-                """,
-                # ears and eyes
-                """
-                          (\__/)
-                          (•ㅅ•)       
-                  
-                """,
-                # ears
-                """
-                          (\__/)
-                """,
-                      # initial empty state
-                """
-                 
-    ]        
-
-"""
 def display_hangman(tries):
     stages = [  # final state: head, torso, paws, tail
                 """
@@ -200,19 +125,38 @@ def display_hangman(tries):
                 """
                   ／＞　 フ
                 """,
-
-                 # initial empty state
+                      # initial empty state
                 """
-                 
+                   --------
+                   |      |
+                   |      
+                   |    
+                   |      
+                   |     
+                   -
+                """
     ]
     return stages[tries]        
-"""
+
 def main():
     word = get_word()
     play(word)
-    while input("Do you want to play again? (Y/N)").upper() == "Y":
+    while input("Do you want to play again? (Y/N): ").upper() == "Y":
         word = get_word()
         play(word)
 
 if __name__ == "__main__":
     main()
+ 
+
+
+
+
+
+
+
+
+
+
+
+
