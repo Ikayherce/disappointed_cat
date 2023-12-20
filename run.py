@@ -91,7 +91,7 @@ def play(word):
     print("\n")
     
     while not guessed and tries > 0:
-        guess = input("Please guess a letter, or the whole word: ").upper()
+        guess = input("Please guess a letter, or the whole word:\n ").upper()
         # check that user data is one letter or a word of the riht length
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters: #warns user letter has been already guessed
