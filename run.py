@@ -1,6 +1,7 @@
 import random
 from words import word_list
 
+
 class Level:
     """
     Level class
@@ -36,25 +37,32 @@ def get_level():
     while True:
         chosen_level = input(
             "Choose your level:\n\n 1. Easy\n 2. Medium\n 3. Hard\n")
-        level_instance = Level(chosen_level)  # Create an instance of the Level class
-        level = level_instance.decide_level()  # Call the decide_level method on the instance
-
+        level_instance = Level(chosen_level)  
+        level = level_instance.decide_level()  
+        
         if validate_level(chosen_level):
-            return filter_words(word_list, level)
+            filtered_list = filter_words(word_list, level)
+            chosen_word = random.choice(filtered_list)
+            return chosen_word
+
+
 
 def filter_words(words, level):
     """
-    Filters words by length into seperate lists
-    depending on chosen level
+    Filters words by length into separate lists depending on chosen level
     """
     if level == "Easy":
         easy = [word for word in words if len(word) < 5]
+        #print(f"Easy words: {easy}")   
+        #print(f"Filtered list for Easy: {easy}") 
         return easy
     elif level == "Medium":
-        Medium = [word for word in words if len(word) < 10]
-        return Medium
+        medium = [word for word in words if 5 <= len(word) < 10]
+        #print(f"Medium words: {medium}")   
+        return medium
     elif level == "Hard":
         hard = [word for word in words if len(word) >= 10]
+        #print(f"Hard words: {hard}")  # Add this line
         return hard
 
 
@@ -76,7 +84,8 @@ def play(word):
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
-    
+
+
     while not guessed and tries > 0:
         guess = input("Please guess a letter, or the whole word:\n ").upper()
         # check that user data is one letter or a word of the riht length
@@ -87,6 +96,8 @@ def play(word):
                 print("Oh no!", guess, "is not in the word.")  
                 tries -= 1  #substract tries by 1 when guess is wrong
                 guessed_letters.append(guess)
+      
+
             else:
                 print("Well done,", guess, "is in the word.")#print feedback to user when guess is correct
                 guessed_letters.append(guess)
@@ -125,7 +136,7 @@ def play(word):
     if guessed:
         print("Congratulations, you guessed the word! Kitty is proud of you!")
     else:
-        print("Oh no! You ran out of tries. Kitty is sad :( )")
+        print("Oh no! You ran out of tries. Kitty is sad :( ")
         print(f"The word was {word}. Kitty wishes you better luck next time!")
 
 
