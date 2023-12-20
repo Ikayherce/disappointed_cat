@@ -7,17 +7,13 @@ colorama.init(autoreset=True)
 
 
 def get_word():
-    """  """
+    """This is the get word function. It gets a random word for the user to guess from the word list in words.py"""
     word = random.choice(word_list)
     return word.upper()
 
 def play(word):
     """ 
-    this is the play function. 
-    this function displays underscores according to the length of the word to guess 
-    it also checks that the user gives valid guesses (letters of the alphabet or words of the right length),
-    as well as subtracting points when guess is not correct and printing right feedback to the user.
-    This function also displays the right letters in their right place replacing the underscore in the word to guess.
+    this is the play function. It checks and stores data provided by the user and gives feedback accordingly
     """
     word_completion = "_" * len(word)
     guessed = False
@@ -36,8 +32,8 @@ def play(word):
             if guess in guessed_letters: #warns user letter has been already guessed
                 print("You already guessed this letter!", guess)
             elif guess not in word:
-                print("Oh no!", guess, "is not in the word.")  #substract tries by 1 when guess is wrong
-                tries -= 1
+                print("Oh no!", guess, "is not in the word.")  
+                tries -= 1  #substract tries by 1 when guess is wrong
                 guessed_letters.append(guess)
             else:
                 print("Well done,", guess, "is in the word.")#print feedback to user when guess is correct
@@ -83,7 +79,8 @@ def play(word):
 
 def display_hangman(tries):
     """
-    This function displays the different stages of display of the disappointed cat, one stage for each failed try. 
+    This is the display function. 
+    It displays the different stages of display of the disappointed cat, one stage for each failed try. 
     """
     stages = [  # final state: head, torso, paws, tail
                 """
