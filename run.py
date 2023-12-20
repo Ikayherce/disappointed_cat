@@ -1,9 +1,74 @@
 import random
 from words import word_list
-import colorama
-from colorama import Fore, Back, Style  # enables different coloured text
 
-colorama.init(autoreset=True)
+class Level:
+    """
+    Level class
+    """
+    def __init__(self, level):
+        self.level = level
+
+    def decide_level(self):
+        """
+        Decides level based on user input
+        """
+        if self.level == "1":
+            print(Easy)
+            return "Easy"
+        elif self.level == "2":
+            print(Medium)
+            return "Medium"
+        elif self.level == "3":
+            print(hard)
+            return "Hard"
+
+
+def validate_level(value):
+    """
+    Checks if user input for level choice equals only 1, 2 or 3
+    """
+    try:
+        if (value != "1") and (value != "2") and (value != "3"):
+            raise ValueError(
+                f"Please only enter 1, 2 or 3. You typed {value}"
+            )
+    except ValueError as e:
+        print(f"Invalid data:{e}, please try again\n")
+        return False
+    return True
+
+
+def get_level():
+    """
+    Gets level value from user and creates word list accordingly
+    """
+    while True:
+        chosen_level = input(
+            "Choose your level:\n\n 1. Easy\n 2. Medium\n 3. Hard\n")
+        level = Level(chosen_level).decide_level()
+
+        if validate_level(chosen_level):
+            filter_words(words, level)
+            break
+    word_list = filter_words(words, level)
+
+    return word_list
+
+
+def filter_words(words, level):
+    """
+    Filters words by length into seperate lists
+    depending on chosen level
+    """
+    if level == "Easy":
+        easy = [word for word in words if len(word) < 5]
+        return easy
+    elif level == "Medium":
+        Medium = [word for word in words if len(word) < 10]
+        return Medium
+    elif level == "Hard":
+        hard = [word for word in words if len(word) >= 10]
+        return hard
 
 
 def get_word():
@@ -158,8 +223,13 @@ def main():
     """
     This function runs the game and asks user if they want to play again when game is over
     """
-    word = get_word()
+    decide_level()
+    validate_level()
+    filter_words()
+    word = get_word() 
     play(word)
+   
+    
     while input("Do you want to play again? (Y/N): ").upper() == "Y":
         word = get_word()
         play(word)
