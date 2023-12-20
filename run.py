@@ -1,7 +1,7 @@
 import random
 from words import word_list
 
-class Level:
+'''class Level:
     """
     Level class
     """
@@ -68,7 +68,7 @@ def filter_words(words, level):
         return Medium
     elif level == "Hard":
         hard = [word for word in words if len(word) >= 10]
-        return hard
+        return hard'''
 
 
 def get_word():
