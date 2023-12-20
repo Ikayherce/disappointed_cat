@@ -80,12 +80,12 @@ def play(word):
     """ 
     this is the play function. It checks and stores data provided by the user and gives feedback accordingly
     """
-    word_completion = "_" * len(word)
+    word_completion = " _ " * len(word)
     guessed = False
     guessed_letters = [] #stores guessed letters
     guessed_words = [] #stores guessed words
     tries = 6 #number of tries before the whole sad kitty is on display
-    print("Welcome to Hangman. Let's play!")# show welcome message
+    print("Welcome to Sad Kitty. Guess right, don't make kitty sad!")# show welcome message
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
