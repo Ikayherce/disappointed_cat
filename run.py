@@ -1,25 +1,19 @@
 import random
 from words import word_list
 
-'''class Level:
+class Level:
     """
     Level class
     """
     def __init__(self, level):
         self.level = level
 
-    def decide_level(self):
-        """
-        Decides level based on user input
-        """
+    def decide_level(self):  # This method should not be indented inside __init__
         if self.level == "1":
-            print(Easy)
             return "Easy"
         elif self.level == "2":
-            print(Medium)
             return "Medium"
         elif self.level == "3":
-            print(hard)
             return "Hard"
 
 
@@ -39,21 +33,14 @@ def validate_level(value):
 
 
 def get_level():
-    """
-    Gets level value from user and creates word list accordingly
-    """
     while True:
         chosen_level = input(
             "Choose your level:\n\n 1. Easy\n 2. Medium\n 3. Hard\n")
-        level = Level(chosen_level).decide_level()
+        level_instance = Level(chosen_level)  # Create an instance of the Level class
+        level = level_instance.decide_level()  # Call the decide_level method on the instance
 
         if validate_level(chosen_level):
-            filter_words(words, level)
-            break
-    word_list = filter_words(words, level)
-
-    return word_list
-
+            return filter_words(word_list, level)
 
 def filter_words(words, level):
     """
@@ -68,7 +55,7 @@ def filter_words(words, level):
         return Medium
     elif level == "Hard":
         hard = [word for word in words if len(word) >= 10]
-        return hard'''
+        return hard
 
 
 def get_word():
@@ -221,17 +208,13 @@ def display_hangman(tries):
 
 def main():
     """
-    This function runs the game and asks user if they want to play again when game is over
+    This function runs the game and asks the user if they want to play again when the game is over.
     """
-    #decide_level()
-    #validate_level()
-    #filter_words()
-    word = get_word() 
+    word = get_level()  # Changed this line
     play(word)
-   
     
     while input("Do you want to play again? (Y/N): ").upper() == "Y":
-        word = get_word()
+        word = get_level()  # And this line
         play(word)
 
 #code fragment so game runs by running the script on the command line
