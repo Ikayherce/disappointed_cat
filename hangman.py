@@ -1,14 +1,10 @@
 import random
 from words import word_list
+import colorama
+from colorama import Fore, Back, Style  # enables different coloured text
 
-logo = """  
-  _________           .___  __   .__  __    __          
- /   _____/____     __| _/ |  | _|__|/  |__/  |_ ___.__.
- \_____  \\__  \   / __ |  |  |/ /  \   __\   __<   |  |
- /        \/ __ \_/ /_/ |  |    <|  ||  |  |  |  \___  |
-/_______  (____  /\____ |  |__|_ \__||__|  |__|  / ____|
-        \/     \/      \/       \/               \/  
-"""
+colorama.init(autoreset=True)
+
 
 def get_word():
     """  """
@@ -25,11 +21,10 @@ def play(word):
     """
     word_completion = "_" * len(word)
     guessed = False
-    guessed_letters = []
-    guessed_words = []
-    tries = 6
-    # show welcome message
-    print("Welcome to Hangman. Let's play!")
+    guessed_letters = [] #stores guessed letters
+    guessed_words = [] #stores guessed words
+    tries = 6 #number of tries before the whole sad kitty is on display
+    print("Welcome to Hangman. Let's play!")# show welcome message
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
@@ -38,17 +33,14 @@ def play(word):
         guess = input("Please guess a letter, or the whole word: ").upper()
         # check that user data is one letter or a word of the riht length
         if len(guess) == 1 and guess.isalpha():
-            if guess in guessed_letters:
-                #warns user letter has been already guessed
+            if guess in guessed_letters: #warns user letter has been already guessed
                 print("You already guessed this letter!", guess)
             elif guess not in word:
-                print("Oh no!", guess, "is not in the word.")
-                #substract tries by 1 when guess is wrong
+                print("Oh no!", guess, "is not in the word.")  #substract tries by 1 when guess is wrong
                 tries -= 1
                 guessed_letters.append(guess)
             else:
-                #print feedback to user when guess is correct
-                print("Well done,", guess, "is in the word.")
+                print("Well done,", guess, "is in the word.")#print feedback to user when guess is correct
                 guessed_letters.append(guess)
                 #displays right guesses to user by replacing underscore by correctly guessed letter
                 word_as_list = list(word_completion)

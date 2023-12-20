@@ -39,3 +39,9 @@ https://www.youtube.com/watch?v=TWLD2OKmSCQ
 https://www.youtube.com/watch?v=cJJTnI22IF8
 https://www.youtube.com/watch?v=m4nEnsavl6w 
 https://www.youtube.com/watch?v=pFvSb7cb_Us
+
+
+Logo
+Text to ASCII Art Generator
+Font: Ogre.
+Inspired by project "get hung" of previous project at code institute https://github.com/Kathrin-ddggxh/CI-PP3_hangman 
