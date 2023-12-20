@@ -136,10 +136,10 @@ def play(word):
     
     #check if user guessed or ran out of tries,print right feedback to user that they have won or lost the game
     if guessed:
-        print("Congratulations, you guessed the word! You can be proud!")
+        print("Congratulations, you guessed the word! Kitty is proud of you!")
     else:
-        print("Oh no! You ran out of tries.")
-        print(f"The word was {word}. Better luck next time!")
+        print("Oh no! You ran out of tries. Kitty is sad :( )")
+        print(f"The word was {word}. Kitty wishes you better luck next time!")
 
 
 def display_hangman(tries):
