@@ -147,7 +147,7 @@ def display_hangman(tries):
     This is the display function. 
     It displays the different stages of display of the disappointed cat, one stage for each failed try. 
     """
-    stages = [  # final state: head, torso, paws, tail
+    stages = [  # final state: head, torso, paws, tail. kitty is disappointed in you
                 """
                           ／＞　 フ
                          | 　_　_| 
