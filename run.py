@@ -223,9 +223,9 @@ def main():
     """
     This function runs the game and asks user if they want to play again when game is over
     """
-    decide_level()
-    validate_level()
-    filter_words()
+    #decide_level()
+    #validate_level()
+    #filter_words()
     word = get_word() 
     play(word)
    
