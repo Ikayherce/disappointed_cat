@@ -60,8 +60,8 @@ The goal of this program is to entertain the user with a simple hangman console 
 - get the option to choose whether they want to play again or not 
 
 
-### Features
-#### Existing features
+## Features
+### Existing features
 - Welcome message
 - Level choice 
 - Feedback "invalid data" when user gives invalid input
@@ -71,12 +71,31 @@ The goal of this program is to entertain the user with a simple hangman console 
 - Feedback for won or lost game
 - Option to play again or exit the game
 
-#### Possible future features
+### Possible future features
  - Adding colors to the design and more forms of visual appeal to the game. 
- - A logo display at the beginning of the game
+ - A logo display at the beginning of the game 
+
+## Debugging
+
+### Fixed bugs
+ - Game wouldn't return a correct answer feedback even when user introduced right letter. This happened because the list of words in words.py was in minuscules, while the code was expecting capital letters. This was fixed by converting the input from the user into lowercase. 
+### Unfixed bugs 
+- User doesn't get correct number of guesses .
+- Game doesn't run again when user gives input "y" 
+## Deployment 
+- The code has been created in the IDE Gitpod, stored and pushed to Github and then deployed in Heroku via Github.
+In order to deploy in Heroku, I used the instructions provided by Code Institute for this project. 
+
+* When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows: 1. `heroku/python` 2. `heroku/nodejs`
+* You must then create a _Config Var_ called `PORT`. Set this to `8000`
+* If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+* Connect your GitHub repository and deploy as normal. 
+
 
 ## Testing
-
+https://pep8ci.herokuapp.com/
+Lighthouse
+Manual testing
 ## Credits
 ### Code ### 
 Project on Github by fellow Code Institute student:
