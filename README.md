@@ -41,7 +41,7 @@ Sad Kitty is my porftolio project 3 for Code Insitute, coded with Python.
 
 ## Planning
 
-My plan consisted in designing a simple hangman application that would have a main play function to handle data input from user and give feedback, and a display function to display the different visual stages of Sad Kitty depending on the number of failed answers. After this logic was put in place I decided to add the level class in order to make it posisble for the user to play choosing among three different levels (easy, medium or hard).
+My plan consisted in designing a simple hangman application that would have a main play function to handle data input from user and give feedback, and a display function to display the different visual stages of Sad Kitty depending on the number of failed answers. After this logic was put in place I decided to add the level class in order to make it possible for the user to play choosing among three different levels (easy, medium or hard).
 
 ## UX 
 ### Program goals 
@@ -78,13 +78,13 @@ The goal of this program is to entertain the user with a simple hangman console 
 ## Debugging
 
 ### Fixed bugs
- - Game wouldn't return a correct answer feedback even when user introduced right letter. This happened because the list of words in words.py was in minuscules, while the code was expecting capital letters. This was fixed by converting the input from the user into lowercase. 
+ - Game wouldn't return a correct answer feedback even when user introduced right letter. This happened because the list of words in words.py was in lower case, while the code was expecting upper case letters. This was fixed by converting the input from the user into lowercase. 
 ### Unfixed bugs 
 - User doesn't get correct number of guesses .
 - Game doesn't run again when user gives input "y" 
 ## Deployment 
-- The code has been created in the IDE Gitpod, stored and pushed to Github and then deployed in Heroku via Github.
-In order to deploy in Heroku, I used the instructions provided by Code Institute for this project. 
+- The code has been created in the IDE Gitpod, stored and pushed to Github's repository and then deployed in Heroku via Github, using Code Institute's mockterminal.  
+In order to deploy in Heroku, I used the instructions provided by Code Institute for this project, see below: 
 
 * When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows: 1. `heroku/python` 2. `heroku/nodejs`
 * You must then create a _Config Var_ called `PORT`. Set this to `8000`
@@ -94,7 +94,9 @@ In order to deploy in Heroku, I used the instructions provided by Code Institute
 
 ## Testing
 https://pep8ci.herokuapp.com/
+
 Lighthouse
+
 Manual testing
 ## Credits
 ### Code ### 
