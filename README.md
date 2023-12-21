@@ -50,9 +50,6 @@ The goal of this program is to entertain the user with a simple hangman console 
 - see the welcome text
 - get feedback on correct and incorrect guesses
 - get feedback on when given data is invalid
-
-![amIresponsive image](assets/images/readmeimages/amiresponsive.png)
-
 - get feedback and see the correct word displayed after losing a game
 - get feedback when game is won and see word displayed
 - get the option to choose whether they want to play again or not 
@@ -64,7 +61,7 @@ The goal of this program is to entertain the user with a simple hangman console 
 
 ![Welcome message](assets/images/readmeimages/welcomemessage.png)
 
-![Instruction](assets/images/readmeimages/instructionsguess.png)
+![Instruction](assets/images/readmeimages/instructionguess.png)
 
 - Feedback "invalid data" when user gives invalid input
 
@@ -83,6 +80,9 @@ The goal of this program is to entertain the user with a simple hangman console 
 ![Display of Sad Kitty in different stages and feedback](assets/images/readmeimages/stagesandfeedback.png)
 
 - Feedback for won or lost game
+
+![Feedback for lost game](assets/images/readmeimages/lostgame.png)
+
 - Option to play again or exit the game
 
 ### Possible future features
@@ -115,16 +115,20 @@ The goal of this program is to entertain the user with a simple hangman console 
 
 ### https://pep8ci.herokuapp.com/
 ![Code Institute Validator](assets/images/readmeimages/civalidator1.png)
+
 The error in line 75 could not be fixed since the game did not run correctly when dividing the line according to python convention. 
+
 ![Code Institute Validator](assets/images/readmeimages/civalidator2.png)
+
 All the white spaces indicated in the validator are in the lines where the visual stages of Sad Kitty are displayed, so they do not affect the application and they are not errors. 
 - 
 ## Credits
 ### Code ### 
-Project on Github by fellow Code Institute student:
+- Project on Github by fellow Code Institute student:
+
 https://github.com/Kathrin-ddggxh/CI-PP3_hangman 
 
-Youtube Tutorials: 
+- Youtube Tutorials: 
 https://www.youtube.com/watch?v=JNXmCOumNw0
 
 https://www.youtube.com/watch?v=TWLD2OKmSCQ
@@ -136,7 +140,7 @@ https://www.youtube.com/watch?v=m4nEnsavl6w
 https://www.youtube.com/watch?v=pFvSb7cb_Us
 
 ### README file ### 
-Inspired by https://github.com/Kathrin-ddggxh/CI-PP3_hangman 
+- Inspired by https://github.com/Kathrin-ddggxh/CI-PP3_hangman 
 
 ### Content ###
 - The list of words stored in words.py was created with help of chat GPT
