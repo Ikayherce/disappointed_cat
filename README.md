@@ -121,7 +121,7 @@ The error in line 75 could not be fixed since the game did not run correctly whe
 ![Code Institute Validator](assets/images/readmeimages/civalidator2.png)
 
 All the white spaces indicated in the validator are in the lines where the visual stages of Sad Kitty are displayed, so they do not affect the application and they are not errors. 
-- 
+
 ## Credits
 ### Code ### 
 - Project on Github by fellow Code Institute student:
