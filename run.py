@@ -1,6 +1,7 @@
 import random
 from words import word_list
-print("Welcome to Sad Kitty. Guess a letter or word right - don't make kitty sad!")# show welcome message
+# show welcome message
+print("Welcome to Sad Kitty. Guess a letter or word right - don't make kitty sad!")
 
 class Level:
     """
@@ -32,7 +33,7 @@ def validate_level(value):
         return False
     return True
 
-"""returns chosen word depending on chosen level """
+"""returns word depending on chosen level """
 def get_level():
     while True:
         chosen_level = input(
@@ -67,6 +68,7 @@ def get_word():
     word = random.choice(word_list)
     return word.upper()
 
+
 def play(word):
     """ 
     this is the play function. It checks and stores data provided by the user and gives feedback accordingly
@@ -90,9 +92,8 @@ def play(word):
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters: #warns user letter has been already guessed
                 print("You already guessed this letter!", guess.upper)
-            #elif guess not in word:
-            elif guess.lower() not in word: 
-                print("Oh no!", guess, "is not in the word.")
+            elif guess not in word: 
+                print("Oh no!", guess , "is not in the word.")
                 tries -= 1  #substract tries by 1 when guess is wrong
                 guessed_letters.append(guess)
       
@@ -109,15 +110,15 @@ def play(word):
 
         
 
-            '''conditional block checks if word is guessed, if letter is already guessed 
-            and whether letter is or is not in the word. '''
+            #conditional block checks if word is guessed, if letter is already guessed 
+            #and whether letter is or is not in the word. 
             if "_" not in word_completion:
                 guessed = True
             elif len(guess) == len(word) and guess.isalpha():
                 if guess in guessed_words:
                     print("You already guessed the word", guess.upper)
             elif guess != word:
-                print(guess.upper, "is not the word.")
+                print(guess, "is not the word.")
                 tries -= 1
                 guessed_words.append(guess)
             else:
@@ -138,7 +139,7 @@ def play(word):
         print("Congratulations, you guessed the word! Kitty is proud of you!")
     else:
         print("Oh no! You ran out of tries. Kitty is sad :( ")
-        print(f"The word was {word}. Kitty wishes you better luck next time!")
+        print(f"The word was {word}. Kitty wishes you better luck next time!") 
 
 
 def display_sad_kitty(tries):
@@ -231,7 +232,7 @@ def main():
 
 #code fragment so game runs by running the script on the command line
 if __name__ == "__main__":
-    main()
+    main() 
  
 
 
