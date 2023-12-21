@@ -129,6 +129,7 @@ All the white spaces indicated in the validator are in the lines where the visua
 https://github.com/Kathrin-ddggxh/CI-PP3_hangman 
 
 - Youtube Tutorials: 
+
 https://www.youtube.com/watch?v=JNXmCOumNw0
 
 https://www.youtube.com/watch?v=TWLD2OKmSCQ
