@@ -91,8 +91,7 @@ def play(word):
     guessed_words = []
     tries = 6
     # show welcome message
-    print("Welcome to Hangman. Let's play!")
-    print(display_hangman(tries))
+    print(display_sad_kitty(tries))
     print(word_completion)
     print("\n")
     
@@ -139,7 +138,7 @@ def play(word):
             print("Your guess is not valid.")
             print(f"It needs to be a letter or a word of {word_length} length")
         #print display of hangman and of word completion
-        print(display_hangman(tries))
+        print(display_sad_kitty(tries))
         print(word_completion)
         print("\n")
     
@@ -151,7 +150,7 @@ def play(word):
         print(f"The word was {word}. Better luck next time!")
 
 
-def display_hangman(tries):
+def display_sad_kitty(tries):
     """
     This function displays the different stages of display of the disappointed cat, one stage for each failed try. 
     """
