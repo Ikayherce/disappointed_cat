@@ -44,13 +44,11 @@ Sad Kitty is my porftolio project 3 for Code Insitute, coded with Python.
 My plan consisted in designing a simple hangman application with help of the tutorials and project listed in the credits, where the main parts of the code would be the play function and the display function. Later on I decided to add  the logic that would allow the user to choose a level of difficulty (easy, medium or hard).
 
 ## UX 
-
 ### Program goals 
 
 The goal of this program is to entertain the user with a simple hangman console game, and at the same time amuse with the twist of a sad cat instead of the classic stick figure. By being able to choose a level of difficulty, the user can play the game several times with variation. 
 
 ### User stories 
-
 #### The user wants to
 - see the introduction text
 - see brief instruction
@@ -63,8 +61,6 @@ The goal of this program is to entertain the user with a simple hangman console 
 
 
 ### Features
-
-
 #### Existing features
 - Welcome message
 - Level choice 
@@ -76,11 +72,10 @@ The goal of this program is to entertain the user with a simple hangman console 
 - Option to play again or exit the game
 
 #### Possible future features
- - Adding colors, a logo and more forms of visual appeal to the game. 
+ - Adding colors to the design and more forms of visual appeal to the game. 
+ - A logo display at the beginning of the game
 
-### Data Model
-
-### Testing
+## Testing
 
 ## Credits
 ### Code ### 
@@ -89,13 +84,17 @@ https://github.com/Kathrin-ddggxh/CI-PP3_hangman
 
 Youtube Tutorials: 
 https://www.youtube.com/watch?v=JNXmCOumNw0
+
 https://www.youtube.com/watch?v=TWLD2OKmSCQ
+
 https://www.youtube.com/watch?v=cJJTnI22IF8
+
 https://www.youtube.com/watch?v=m4nEnsavl6w 
+
 https://www.youtube.com/watch?v=pFvSb7cb_Us
 
 ### README file ### 
- https://github.com/Kathrin-ddggxh/CI-PP3_hangman 
+Inspired by https://github.com/Kathrin-ddggxh/CI-PP3_hangman 
 
 ### List of words (content) ###
 The list of words stored in words.py was created with help of chat GPT
