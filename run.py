@@ -1,6 +1,6 @@
 import random
 from words import word_list
-
+print("Welcome to Sad Kitty. Guess a letter or word right - don't make kitty sad!")# show welcome message
 
 class Level:
     """
@@ -9,7 +9,7 @@ class Level:
     def __init__(self, level):
         self.level = level
 
-    def decide_level(self):  # This method should not be indented inside __init__
+    def decide_level(self):   
         if self.level == "1":
             return "Easy"
         elif self.level == "2":
@@ -20,7 +20,7 @@ class Level:
 
 def validate_level(value):
     """
-    Checks if user input for level choice equals only 1, 2 or 3
+    Checks if user wants to play level easy, medium or hard
     """
     try:
         if (value != "1") and (value != "2") and (value != "3"):
@@ -79,27 +79,35 @@ def play(word):
     guessed = False
     guessed_letters = [] #stores guessed letters
     guessed_words = [] #stores guessed words
-    tries = 6 #number of tries before the whole sad kitty is on display
-    print("Welcome to Sad Kitty. Guess right, don't make kitty sad!")# show welcome message
+    tries = 6 #number of tries before the whole sad kitty is on full display
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
 
+    word_letters = list(word)
 
     while not guessed and tries > 0:
         guess = input("Please guess a letter, or the whole word:\n ").upper()
+        print(f"DEBUG: The word is {''.join(word_letters)}")  # Debugging print to see the word
+
         # check that user data is one letter or a word of the riht length
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters: #warns user letter has been already guessed
                 print("You already guessed this letter!", guess)
             elif guess not in word:
+                print(f"DEBUG: The word is {word}")  # Debugging print
                 print("Oh no!", guess, "is not in the word.")  
+                print(f"DEBUG: Result of comparison: {guess in word_letters}")  # Debugging print
                 tries -= 1  #substract tries by 1 when guess is wrong
                 guessed_letters.append(guess)
       
 
             else:
-                print("Well done,", guess, "is in the word.")#print feedback to user when guess is correct
+                print(f"DEBUG: The guessed letter {guess} is in the word.")  # Debugging print
+                #print("Well done,", guess, "is in the word.")#print feedback to user when guess is correct
+                print(f"DEBUG: Result of comparison: {guess in word_letters}")  # Debugging print
+                print(f"DEBUG: Result of comparison: {guess in word}")  # Debugging print
+                print("Indices of", guess, "in word:", [i for i, letter in enumerate(word) if letter == guess]) # Debugging print
                 guessed_letters.append(guess)
                 #displays right guesses to user by replacing underscore by correctly guessed letter
                 word_as_list = list(word_completion)
@@ -108,6 +116,8 @@ def play(word):
                     word_as_list[index] = guess
                 word_completion = "".join(word_as_list)
                 #if all underscores are replaced by correctly guessed letters, word is guessed
+                print("Current word_completion:", word_completion)  # Debugging print
+
                 if "_" not in word_completion:
                     guessed = True
         elif len(guess) == len(word) and guess.isalpha():
