@@ -72,8 +72,7 @@ def play(word):
             # feedback when input is not a letter or word of right length
             word_length = len(word)
             print("Your guess is not valid.")
-            print(f"It needs to be a letter or a
-                  word of {word_length} letters' length")
+            print(f"It needs to be a letter or a word of {word_length} letters' length")
         # print display of hangman and of word completion
         print(display_sad_kitty(tries))
         print(word_completion)
@@ -152,7 +151,7 @@ def display_sad_kitty(tries):
                 """
                   ／＞　 フ
                 """,
-                      # initial empty state
+                 # initial empty state
                 """
                 """
     ]
