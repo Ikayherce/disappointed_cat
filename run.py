@@ -5,7 +5,7 @@ print("Welcome to Sad Kitty. Guess right - don't make kitty sad!")
 
 
 def get_word():
-    """  """
+    """function to get random word from word list in separate file"""
     word = random.choice(word_list)
     return word.upper()
 
