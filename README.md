@@ -22,9 +22,6 @@ Sad Kitty is my porftolio project 3 for Code Insitute, coded with Python.
     - [Future Features](#possible-future-features)
 
 - [Testing](#testing)
-    - [Validator Testing](#validator-testing)
-    - [Browser Testing](#browser-testing)
-    - [Testing User Stories](#testing-user-stories-functionality)
 
 - [Debugging](#debugging)
    
@@ -64,10 +61,27 @@ The goal of this program is to entertain the user with a simple hangman console 
 ## Features
 ### Existing features
 - Welcome message
+
+![Welcome message](assets/images/readmeimages/welcomemessage.png)
+
+![Instruction](assets/images/readmeimages/instructionsguess.png)
+
 - Feedback "invalid data" when user gives invalid input
+
+![Feedback of invalid data](assets/images/readmeimages/invalidfeedback.png)
+
 - Feedback when user replies correctly
+
+![Feedback of correct answer](assets/images/readmeimages/answercorrect.png)
+
 - Feedback when user replies incorrectly
+
+![Feedback of incorrect answer](assets/images/readmeimages/answerincorrect.png)
+
+
 - Sad Kitty display
+![Display of Sad Kitty in different stages and feedback](assets/images/readmeimages/stagesandfeedback.png)
+
 - Feedback for won or lost game
 - Option to play again or exit the game
 
@@ -90,7 +104,7 @@ The goal of this program is to entertain the user with a simple hangman console 
 
 ## Testing
 ### Manual testing
-- Game starts correctly. 
+- Game starts correctly and displays welcome message.
 - Game gives feedback when invalid input is given. 
 - Game gives feedback when letter is correctly guessed. 
 - Game displays word completion when letters are guessed.
@@ -100,9 +114,9 @@ The goal of this program is to entertain the user with a simple hangman console 
 - Game asks user whether they want to play again.
 
 ### https://pep8ci.herokuapp.com/
-![Code Institute Validator](assets/images/readmeimages/civalidator1)
+![Code Institute Validator](assets/images/readmeimages/civalidator1.png)
 The error in line 75 could not be fixed since the game did not run correctly when dividing the line according to python convention. 
-![Code Institute Validator](assets/images/readmeimages/civalidator2)
+![Code Institute Validator](assets/images/readmeimages/civalidator2.png)
 All the white spaces indicated in the validator are in the lines where the visual stages of Sad Kitty are displayed, so they do not affect the application and they are not errors. 
 - 
 ## Credits
@@ -124,5 +138,6 @@ https://www.youtube.com/watch?v=pFvSb7cb_Us
 ### README file ### 
 Inspired by https://github.com/Kathrin-ddggxh/CI-PP3_hangman 
 
-### List of words (content) ###
-The list of words stored in words.py was created with help of chat GPT
+### Content ###
+- The list of words stored in words.py was created with help of chat GPT
+- The cat figure displayed in the game was found in https://emojicombos.com/cat-text-art 
