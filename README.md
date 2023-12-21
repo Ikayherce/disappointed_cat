@@ -1,7 +1,7 @@
 
 # Sad Kitty
 
-Sad Kitty is a classic hangman game but the outcome of losing is not seeing a stickfigure hang, it's instead seeing a cat that is very disappointed in you. 
+Sad Kitty is a classic hangman game with a twist. Instead of seeing a dangling man displayed when you guess wrong, you see a cat who is disappointed in you. 
 Sad Kitty is my porftolio project 3 for Code Insitute, coded with Python. 
 
 [Link to live site] 
@@ -41,7 +41,7 @@ Sad Kitty is my porftolio project 3 for Code Insitute, coded with Python.
 
 ## Planning
 
-I planned a simple hangman application where the main parts of the code are the play function, the display function and the logic that allows the user to choose a level of difficulty (easy, medium or hard) and filters the words in the word list (in a separate file) by level. 
+My plan consisted in designing a simple hangman application with help of the tutorials and project listed in the credits, where the main parts of the code would be the play function and the display function. Later on I decided to add  the logic that would allow the user to choose a level of difficulty (easy, medium or hard).
 
 ## UX 
 
@@ -53,7 +53,7 @@ The goal of this program is to entertain the user with a simple hangman console 
 
 #### The user wants to
 - see the introduction text
-- see brief and clear instructions
+- see brief instruction
 - choose a level of difficulty (easy, medium or hard)
 - get feedback on correct and incorrect guesses
 - get feedback on when given data is invalid
@@ -63,9 +63,20 @@ The goal of this program is to entertain the user with a simple hangman console 
 
 
 ### Features
+
+
 #### Existing features
+- Welcome message
+- Level choice 
+- Feedback "invalid data" when user gives invalid input
+- Feedback when user replies correctly
+- Feedback when user replies incorrectly
+- Sad Kitty display
+- Feedback for won or lost game
+- Option to play again or exit the game
 
 #### Possible future features
+ - Adding colors, a logo and more forms of visual appeal to the game. 
 
 ### Data Model
 
@@ -87,4 +98,4 @@ https://www.youtube.com/watch?v=pFvSb7cb_Us
  https://github.com/Kathrin-ddggxh/CI-PP3_hangman 
 
 ### List of words (content) ###
-Chat GPT
+The list of words stored in words.py was created with help of chat GPT
