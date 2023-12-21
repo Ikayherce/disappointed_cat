@@ -136,7 +136,7 @@ def play(word):
             #if user has not provided a letter or word of correct length they get feedback that guess is invalid
             word_length = len(word)
             print("Your guess is not valid.")
-            print(f"It needs to be a letter or a word of {word_length} length")
+            print(f"It needs to be a letter or a word of {word_length} letters' length")
         #print display of hangman and of word completion
         print(display_sad_kitty(tries))
         print(word_completion)

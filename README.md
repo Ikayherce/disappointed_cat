@@ -41,18 +41,18 @@ Sad Kitty is my porftolio project 3 for Code Insitute, coded with Python.
 
 ## Planning
 
-My plan consisted in designing a simple hangman application that would have a main play function to handle data input from user and give feedback, and a display function to display the different visual stages of Sad Kitty depending on the number of failed answers. After this logic was put in place I decided to add the level class in order to make it possible for the user to play choosing among three different levels (easy, medium or hard).
+My plan consisted in designing a simple hangman application that would have a main play function to handle data input from user and give feedback, and a display function to display the different visual stages of Sad Kitty depending on the number of failed answers. 
+While building the application I thought it would be more fun to display something other than the classic dangling stick figure, so I decided to display a cat instead. 
+I wanted to add the option to choose a level by using "Class" but this section of code caused a lot of bugs that I did not succeed in fixing in the time alloted, which is why I went back to my initial, simpler code without levels. 
 
 ## UX 
 ### Program goals 
 
-The goal of this program is to entertain the user with a simple hangman console game, and at the same time amuse with the twist of a sad cat instead of the classic stick figure. By being able to choose a level of difficulty, the user can play the game several times with variation. 
+The goal of this program is to entertain the user with a simple hangman console game, and at the same time amuse with the twist of a sad cat instead of the classic stick figure.  
 
 ### User stories 
 #### The user wants to
-- see the introduction text
-- see brief instruction
-- choose a level of difficulty (easy, medium or hard)
+- see the welcome text
 - get feedback on correct and incorrect guesses
 - get feedback on when given data is invalid
 - get feedback and see the correct word displayed after losing a game
@@ -63,7 +63,6 @@ The goal of this program is to entertain the user with a simple hangman console 
 ## Features
 ### Existing features
 - Welcome message
-- Level choice 
 - Feedback "invalid data" when user gives invalid input
 - Feedback when user replies correctly
 - Feedback when user replies incorrectly
@@ -72,8 +71,9 @@ The goal of this program is to entertain the user with a simple hangman console 
 - Option to play again or exit the game
 
 ### Possible future features
+ - Choice of level (easy, medium or hard). 
  - Adding colors to the design and more forms of visual appeal to the game. 
- - A logo display at the beginning of the game 
+ - A logo display at the beginning of the game . 
 
 ## Debugging
 
