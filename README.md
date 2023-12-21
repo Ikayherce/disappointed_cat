@@ -41,7 +41,7 @@ Sad Kitty is my porftolio project 3 for Code Insitute, coded with Python.
 
 ## Planning
 
-My plan consisted in designing a simple hangman application with help of the tutorials and project listed in the credits, where the main parts of the code would be the play function and the display function. Later on I decided to add  the logic that would allow the user to choose a level of difficulty (easy, medium or hard).
+My plan consisted in designing a simple hangman application that would have a main play function to handle data input from user and give feedback, and a display function to display the different visual stages of Sad Kitty depending on the number of failed answers. After this logic was put in place I decided to add the level class in order to make it posisble for the user to play choosing among three different levels (easy, medium or hard).
 
 ## UX 
 ### Program goals 
