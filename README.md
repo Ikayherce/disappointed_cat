@@ -89,11 +89,22 @@ The goal of this program is to entertain the user with a simple hangman console 
 
 
 ## Testing
-https://pep8ci.herokuapp.com/
+### Manual testing
+- Game starts correctly. 
+- Game gives feedback when invalid input is given. 
+- Game gives feedback when letter is correctly guessed. 
+- Game displays word completion when letters are guessed.
+- Game gives feedback when answer is wrong.
+- Game displays the visual stages of Sad Kitty correctly.
+- Game gives feedback when game is over and user has won or lost.
+- Game asks user whether they want to play again.
 
-Lighthouse
-
-Manual testing
+### https://pep8ci.herokuapp.com/
+![Code Institute Validator](assets/images/readmeimages/civalidator1)
+The error in line 75 could not be fixed since the game did not run correctly when dividing the line according to python convention. 
+![Code Institute Validator](assets/images/readmeimages/civalidator2)
+All the white spaces indicated in the validator are in the lines where the visual stages of Sad Kitty are displayed, so they do not affect the application and they are not errors. 
+- 
 ## Credits
 ### Code ### 
 Project on Github by fellow Code Institute student:
