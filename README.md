@@ -4,7 +4,7 @@
 Sad Kitty is a classic hangman game with a twist. Instead of seeing a dangling man displayed when you guess wrong, you see a cat who is disappointed in you. 
 Sad Kitty is my porftolio project 3 for Code Insitute, coded with Python. 
 
-[Link to live site] https://sad-kitty-e217c912617b.herokuapp.com/
+Link to live site: https://sad-kitty-e217c912617b.herokuapp.com/
 
 ![amIresponsive image](assets/images/readmeimages/amiresponsive.png)
 
